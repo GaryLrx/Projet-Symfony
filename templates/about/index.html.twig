@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About !{% endblock %}
+
+{% block body %}
+  <header>
+    <img src="img/malabar.png" alt="Image Malabar" class="logo">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="{{ path('home') }}">Home</a></li>
+        <li class="active"><a href="{{ path('about') }}">About</a></li>
+        <li><a href="{{ path('contact') }}">Contact</a></li>
+        <li><a href="{{ path('app_bonbons_new') }}">Bonbons</a></li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" title="Show navbar" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+  
+    <div class="example-wrapper">
+        <h1>A propos </h1>
+        <div class="texte">
+          <p>Bonjour, je m'apelle Leroux Gary, jeune developpeur junior depuis 2021, ce site a été réaliser
+            dans le cadre de ma formation TPDWWB pour mon ECF2
+          </p>
+        </div>
+    </div>
+{% endblock %}

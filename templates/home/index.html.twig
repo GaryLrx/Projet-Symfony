@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage !{% endblock %}
+
+    
+{% block stylesheets %} 
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+{% endblock %}
+
+{% block javascripts %} 
+  <script src="{{asset('js/script.js')}}" async></script>
+{% endblock %}
+
+{% block body %}
+
+
+
+  <header>
+    <img src="img/malabar.png" alt="Image Malabar" class="logo">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li class="active"><a href="{{ path('home') }}">Home</a></li>
+        <li><a href="{{ path('about') }}">About</a></li>
+        <li><a href="{{ path('contact') }}">Contact</a></li>
+        <li><a href="{{ path('app_bonbons_new') }}">Bonbons</a></li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" title="Show navbar" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+      
+  <button class="scroll-to-top">
+  <img src="img/arrow.png" id="fleche"></button>
+
+      <div class="example-wrapper">
+          <img class="fit-picture" src="img/welcome.png" alt="Image de bienvenu">
+      </div>
+
+      <div class="contenu">
+        <div class="max">
+          <h2>Un bonbon PIKant qui cache bien son jeu !</h2>
+          <img class="fit-picture" src="img/bonboncoeur.png" alt="Image de bonbons coeurs haribot pik">
+          <p>
+            Vous connaissez les nouveaux LOVE PIK ?
+            Ce sont de savoureux bonbons moelleux avec un cœur acidulé goût fruits rouges
+            Fondant et piquant, ce délicieux bonbon HARIBO en forme de coeur en surprendra plus d'un.
+            Cette boîte contient 150 bonbons Love Pik HARIBO.
+          </p>
+        </div>
+
+        <div class="max">
+          <h2>Pour les grands amateurs du bonbon Schtroumpfs !</h2>
+          <img class="fit-picture" src="img/bonbonsshtroumpfs.png" alt="Image de bonbons shtroumpfs Haribot">
+          <p>
+            Vous raffolez des bonbons Schtroumpfs ? Ça tombe bien, nous aussi !
+            Retrouvez vos Schtroumpfs préférés sur la e-boutique HARIBO.
+            Cette boîte possède 210 bonbons Les Schtroumpfs HARIBO.
+          </p>
+        </div>
+
+        <div class="max">
+          <h2>Sticks au bon goût de pomme !</h2>
+          <img class="fit-picture" src="img/bonbonsfils.png" alt="Image de bonbons fils Haribaots goût Pomme">
+          <p>
+            Découvrez ces sticks au bon goût de pomme.
+            Cette boîte contient 150 bonbons Pomme en stick.
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-basic">
+        <footer>
+            <div class="social"></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="{{ path('home') }}">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Leroux Gary © 2022</p>
+        </footer>
+    </div>      
+      </footer>
+
+
+{% endblock %}

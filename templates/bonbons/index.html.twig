@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bonbons index{% endblock %}
+
+{% block body %}
+
+  <header>
+    <img src="/img/malabar.png" alt="Image Malabar" class="logo">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="{{ path('home') }}">Home</a></li>
+        <li><a href="{{ path('about') }}">About</a></li>
+        <li><a href="{{ path('contact') }}">Contact</a></li>
+        <li><a href="{{ path('app_bonbons_new') }}">Bonbons</a></li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" title="Show navbar" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+
+    <div class="content">
+        <h1>Bonbons index</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for bonbon in bonbons %}
+                <tr>
+                    <td>{{ bonbon.id }}</td>
+                    <td>{{ bonbon.titre }}</td>
+                    <td>{{ bonbon.description }}</td>
+                    <td><img src="{{ vich_uploader_asset(bonbon, 'imageFile') }}" alt="Image de bonbons" id="imad"></td>
+                    <td>
+                        <a href="{{ path('app_bonbons_show', {'id': bonbon.id}) }}">show</a>
+                        <a href="{{ path('app_bonbons_edit', {'id': bonbon.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <a href="{{ path('app_bonbons_new') }}">Create new</a>
+
+          <footer>
+        <div class="footer-basic">
+        <footer>
+            <div class="social"></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="{{ path('home') }}">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Leroux Gary © 2022</p>
+        </footer>
+    </div>      
+      </footer>
+{% endblock %}

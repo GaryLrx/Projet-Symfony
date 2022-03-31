@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+$bg: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg";
+
+body{
+    // GENERAL
+    background-color: #FFF6AF;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+    // FORM
+        form{
+
+            input{
+                display: block;
+                width: 100%;
+                font-size: $font-size;
+                line-height: $font-size * 2;
+                font-family: $font-face;
+                margin-bottom: $font-size * 2;
+                border: none;
+                border-bottom: 5px solid rgba(0,0,0,1);
+                background: $form-bg;
+                min-width: 250px;
+                padding-left: 5px;
+                outline: none;
+                color: rgba(0,0,0,1);
+                
+                &:focus{
+                    border-bottom: 5px solid $form-shadow;
+                }
+            }
+
+
+            button{
+                &:hover{
+                    background: #FFF6AF;
+                    color: black;
+                    border: 1px solid rgba(0,0,0,1);
+                }
+                
+                display: block;
+                margin: 0 auto;
+                line-height: $font-size * 2;
+                padding: 0 20px;
+                background: $form-shadow;
+                letter-spacing: 2px;
+                transition: .2s all ease-in-out;
+                outline: none;
+                border: 1px solid rgba(0,0,0,1);
+                box-shadow: 3px 3px 1px $form-primary-highlight, 3px 3px 1px 1px rgba(0,0,0,1);
+            }
+
+            textarea{
+                &:focus{
+                    border-bottom: 5px solid $form-shadow;
+                }
+                resize: none;
+                display: block;
+                width: 100%;
+                font-size: $font-size;
+                line-height: $font-size * 2;
+                font-family: $font-face;
+                margin-bottom: $font-size * 2;
+                border: none;
+                border-bottom: 5px solid rgba(0,0,0,1);
+                background: $form-bg;
+                min-width: 250px;
+                padding-left: 5px;
+                outline: none;
+                color: rgba(0,0,0,1);
+            }
+
+        }
+        // NAVBAR
+            
+            background: $form-bg;
+            padding: 50px 100px;
+            border: 2px solid rgba(0,0,0,1);
+            box-shadow: 15px 15px 1px $form-shadow, 15px 15px 1px 2px rgba(0,0,0,1);   
+    
+}
+ 

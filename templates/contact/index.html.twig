@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez nous :{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+  <header>
+    <img src="img/malabar.png" alt="Image Malabar" class="logo">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+    <aside class="sidebar">
+      <nav class="nav">
+        <ul>
+          <li><a href="{{ path('home') }}">Home</a></li>
+          <li><a href="{{ path('about') }}">About</a></li>
+          <li class="active"><a href="{{ path('contact') }}">Contact</a></li>
+          <li><a href="{{ path('app_bonbons_new') }}">Bonbons</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <label for="nav-toggle" title="Show navbar" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+  
+    <form class="contact-us" method="post">
+        <div class="example-wrapper">
+            <h1>Nous contactez </h1>
+            {{form(createForm)}} 
+        </div>
+    </form>
+{% endblock %}

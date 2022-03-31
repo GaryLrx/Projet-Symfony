@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Bonbons{% endblock %}
+
+{% block body %}
+    <h1>Create new Bonbons</h1>
+
+    {{ include('bonbons/_form.html.twig') }}
+
+    <a href="{{ path('app_bonbons_index') }}">back to list</a>
+{% endblock %}
